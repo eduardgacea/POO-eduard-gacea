@@ -84,8 +84,6 @@ class Student {
       this->anStudiu = copie.anStudiu;
       this->buget = copie.buget;
 
-      this->nrNote = copie.nrNote;
-
       if(this->nrNote == 0) this->note = nullptr;
       else {
         this->note = new float[this->nrNote];
@@ -93,6 +91,8 @@ class Student {
           this->note[i] = copie.note[i];
         }
       }
+
+      this->nrNote = copie.nrNote;
     }
 
     // supraincarcare operator de asignare
